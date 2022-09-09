@@ -1,5 +1,5 @@
 /*Atividades semana 1*/
-
+/*
 const nomeAnime = "One Piece"
 const numeroEpisodios = 1000
 const dublagem = true
@@ -30,5 +30,49 @@ console.log(nomeAnime2.toUpperCase(), "\nNumero de episodios:", numeroEpisodios2
 
 console.log(nomeAnime3.toUpperCase(), "\nNumero de episodios:", numeroEpisodios3, "\nTem dublagem oficial?", dublagem3,
 "\nNome de alguns personagens:", nomePersonagens3)
-
+*/
 /*Fim da primeira atividade*/
+
+anime1 = {
+    nome: "One Piece",
+    numEpisodios: 1031,
+    dublagem: true,
+    nomePersonagens: {nome1: "Luffy", nome2: "Zoro", nome3: "Sanji"}
+}
+
+anime2 = {
+    nome: "Steins;Gate",
+    numEpisodios: 25,
+    dublagem: false,
+    nomePersonagens: {nome1: "Okabe", nome2: "Kurisu", nome3: "Mayuri"}
+}
+
+anime3 = {
+    nome: "Full Metal Alchemist Brotherhood",
+    numEpisodios: 64,
+    dublagem: true,
+    nomePersonagens: {nome1: "Edward", nome2: "Alphonse", nome3: "Roy Mustang"}
+}
+
+const animes = []
+
+if (anime1.dublagem === true){
+    animes.push(anime1)
+} else{
+    alert("O anime \"One Piece\" não tem dublagem e não será adicionado!")
+}
+
+if(anime2.dublagem === true){
+    animes.push(anime2)
+} else{
+    alert("O anime \"Steins;Gate\" não tem dublagem e não será adicionado!")
+}
+
+if(anime3.dublagem === true){
+    animes.push(anime3)
+} else{
+    alert("O anime \"Full Metal Alchemist Brotherhood\" não tem dublagem e não será adicionado!")
+}
+console.log(animes)
+
+//Fim atividades semana 2
