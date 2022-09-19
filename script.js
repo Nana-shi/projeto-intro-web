@@ -1,5 +1,5 @@
 /*Atividades semana 1*/
-/*
+
 const nomeAnime = "One Piece"
 const numeroEpisodios = 1000
 const dublagem = true
@@ -19,6 +19,7 @@ const media = (numeroEpisodios+numeroEpisodios2+numeroEpisodios3)/3
 
 const dublagens = dublagem && dublagem2 && dublagem3
 
+console.log("--------------Relatorios semana 1-----------------")
 console.log("Média de episodios dos três:", media)
 console.log("Todos tem dublagem?", dublagens)
 
@@ -30,12 +31,12 @@ console.log(nomeAnime2.toUpperCase(), "\nNumero de episodios:", numeroEpisodios2
 
 console.log(nomeAnime3.toUpperCase(), "\nNumero de episodios:", numeroEpisodios3, "\nTem dublagem oficial?", dublagem3,
 "\nNome de alguns personagens:", nomePersonagens3)
-*/
+
 /*Fim da primeira atividade*/
 
 anime1 = {
     nome: "One Piece",
-    numEpisodios: 1031,
+    numEpisodios: 1000,
     dublagem: true,
     nomePersonagens: ["Luffy", "Zoro", "Sanji"]
 }
@@ -43,7 +44,7 @@ anime1 = {
 anime2 = {
     nome: "Steins;Gate",
     numEpisodios: 25,
-    dublagem: true,
+    dublagem: false,
     nomePersonagens: ["Okabe", "Kurisu", "Mayuri"]
 }
 
@@ -73,23 +74,34 @@ if(anime3.dublagem === true){
 } else{
     alert("O anime \"Full Metal Alchemist Brotherhood\" não tem dublagem e não será adicionado!")
 }
-// console.log(animes)
+
+console.log("--------------Relatorios semana 2-----------------")
+console.log(animes)
 
 //Fim atividades semana 2
+
+console.log("--------------Relatorios semana 3-----------------")
 //1-
+console.log("ATIVIDADE 1:")
+
 for(let i in animes){
     stringNomePersonagens = animes[i].nomePersonagens.toString();
     animes[i].nomePersonagens = stringNomePersonagens
+    console.log(animes[i].nomePersonagens)
 }
-//2-
-// for(i in animes){
-//     console.log(`${animes[i].nome.toUpperCase()}
-//     Numero de episodios: ${animes[i].numEpisodios}
-//     Tem dublagem?: ${animes[i].dublagem} 
-//     Nomes de alguns personagens: ${animes[i].nomePersonagens}`)
-// }
 
-//3-
+
+//2-
+console.log("ATIVIDADE 2:")
+
+for(let i in animes){
+    for(let j in animes[i]){
+        console.log(`${j}: ${animes[i][j]}`)
+    }
+}
+
+// 3-
+console.log("ATIVIDADE 3:")
 
 // const viraString = (array) =>{       // Pegar o objeto dentro de um array
 //     for(let i in array){
@@ -101,15 +113,16 @@ for(let i in animes){
 
 // viraString(animes)
 
-// const objetoString = (objeto) =>{
-//     for(let propriedade in objeto){
-//         console.log(objeto[propriedade].toString())
-//     }
-// }
+const objetoString = (objeto) =>{
+    for(let propriedade in objeto){
+        console.log(objeto[propriedade].toString())
+    }
+}
 
-// objetoString(anime1)
+objetoString(anime1)
 
-//4-
+// 4-
+console.log("ATIVIDADE 4:")
 
 const filtroItem = (array, string) =>{
     for(let objeto of array){
@@ -127,7 +140,6 @@ const filtroItem = (array, string) =>{
             //     return alert("Sem item")
             // }
         }
-    }
-}
+    } }
 
 filtroItem(animes, "nomePersonagens")
