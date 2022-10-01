@@ -6,75 +6,123 @@
 }
 
 header{
-    padding-top: 1.5vh;
-    text-align: center;
     border: 1px dashed rgb(171, 4, 4);
     background-color: darkred;
     color: white;
     height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-
-
-
-
 main{
-    margin: 0 auto;
     background-color:lightgrey;
     border: 1px dashed darkred;
     height: 83vh;
+    width: 100vw;
     font-size: medium;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 7fr;
+    align-items: center;
 }
-
 .busca{
-    padding-top: 1.5vh;
     text-align: center;
     margin: 8px 1px 1px 1px;
     height: 5vh;
-    
+    grid-column: 2/3;
+    grid-row: 1/2;
 }
-
-
 .bloco{
-    padding-top: 3vh;
-    width: 400px;
+    width: 370px;
     height: 425px;
-    text-align: center;
+    display: grid;
     border-radius: 20px;
-    list-style: none;
+    justify-content: center;
+    justify-self: center;
 }
-
+.lista{
+    list-style: none
+}
 #anime1{
     background-color: orange;
     border: 2px dashed rgb(244, 186, 78);
-    position:absolute;
-    top: 19vh;   
-    left: 3vw;
-    
-
+    grid-column: 1/2;
+    grid-row: 2/3;
+}
+.imagem1{
+    justify-self: center;
+    margin-top: 3vh;
 }
 #anime2{
     background-color:steelblue;
     border: 2px dashed rgb(92, 160, 215);
-    position: absolute;
-    top: 19vh;
-    left: 35.5vw;
+    grid-column: 2/3;
+    grid-row: 2/3;
+}
+.imagem2{
+    justify-self: center;
+    margin-top: 3vh;
 }
 #anime3{
     background-color:seagreen;
     border: 2px dashed rgb(72, 175, 117);
-    position: absolute;
-    top: 19vh;
-    left: 68vw;
+    grid-column: 3/4;
+    grid-row: 2/3;
+}
+.imagem3{
+    justify-self: center;
+    margin-top: 3vh;
 }
 footer{
     display: block;
-    width: 100%;
     height: 7vh;
-    padding-top: 2vh;
-    text-align: center;
+    width: 100vw;
     border: 2px dashed rgb(171, 4, 4);
     background-color: darkred;
     color: white;
-    position: fixed;
-    bottom: 0vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@media screen and (max-device-width: 1100px) {
+    header{
+        display: flex;
+        height: 10vh;
+        justify-content: center;
+        align-items: center;
+    }
+    main{
+        width: 100vw;
+        height: 100%;
+        display: grid;
+        grid-template-columns: 100vw;
+        grid-template-rows: 0.5fr 4fr 4fr 4fr ;
+        background-color: lightgray;
+    }
+    .bloco{
+        margin: 2vh;
+    }
+    .busca{
+        grid-row: 1/2;
+        grid-column: 1/2;
+        text-align: center;
+        padding-top: 0.5vh;
+    }    
+    #anime1{
+        grid-row: 2/3;
+        grid-column: 1/2;
+    }
+    #anime2{
+        grid-row: 3/4;
+        grid-column: 1/2;
+    }
+    #anime3{
+        grid-row: 4/5;
+        grid-column: 1/2;
+    }
+    footer{
+        position:static;
+        height: 7vh;
+        bottom: 0;
+    }
 }

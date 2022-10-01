@@ -129,7 +129,7 @@ const filtroItem = (array, string) =>{
         // console.log(objeto)
         for(let item in objeto){
             //console.log(objeto[item])
-            if(item == string){
+            if(objeto[item] == string){
                 console.log(objeto[item].toString())
             } else{
                 alert("Nenhum item foi encontrado nesse objeto!!")
@@ -142,4 +142,4 @@ const filtroItem = (array, string) =>{
         }
     } }
 
-filtroItem(animes, "nomePersonagens")
+filtroItem(animes, 'Full Metal Alchemist Brotherhood')
