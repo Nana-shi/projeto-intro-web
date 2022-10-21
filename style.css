@@ -25,13 +25,17 @@ main{
     grid-template-rows: 1fr 7fr;
     align-items: center;
 }
-.busca{
+#busca{
     text-align: center;
     margin: 8px 1px 1px 1px;
     height: 5vh;
     grid-column: 2/3;
     grid-row: 1/2;
 }
+.escondido{
+    display: none;
+}
+
 .bloco{
     width: 370px;
     height: 425px;
@@ -67,7 +71,7 @@ main{
     background-color:seagreen;
     border: 2px dashed rgb(72, 175, 117);
     grid-column: 3/4;
-    grid-row: 2/3;
+    grid-row: 2/3;    
 }
 .imagem3{
     justify-self: center;
@@ -100,9 +104,10 @@ footer{
         background-color: lightgray;
     }
     .bloco{
+        width: 98vw;
         margin: 2vh;
     }
-    .busca{
+    #busca{
         grid-row: 1/2;
         grid-column: 1/2;
         text-align: center;
